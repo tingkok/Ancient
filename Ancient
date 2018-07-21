@@ -1,0 +1,208 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# tools by Ancien One
+# coding By MR -T_ 
+# Hargai Karya Orang Lain
+# cikidot
+clear
+
+blue='\e[0;34'
+cyan='\e[0;36m'
+green='\e[0;34m'
+okegreen='\033[92m'
+lightgreen='\e[1;32m'
+white='\e[1;37m'
+red='\e[1;31m'
+yellow='\e[1;33m'
+
+###################################################
+# CTRL C
+###################################################
+trap ctrl_c INT
+ctrl_c() {
+clear
+echo -e $red"[#]> (Ctrl + C ) Detected, Trying To Exit ... "
+sleep 1
+echo ""
+echo -e $green"[+]> Thank-You kawan"
+sleep 1
+echo ""
+echo -e $white"[+]> MR-T-  ... "
+read enter
+exit
+}
+
+echo -e $green"           __  ___      __________"
+echo -e $green"          /  |/  /___ /____   ___/"
+echo -e $white"         / /|_/ / __/   /  /"
+echo -e $white"        /_/  /_/_/     /__/"
+echo -e $red"           <====================================================>"
+echo -e $white"         * $green Tools Ancient One v.1          $green       *"
+echo -e $red"           <====================================================>"
+echo ""
+echo -e $white" [=] 01) Red Hawk"
+echo -e $white" [=] 02) D-Tect"
+echo -e $white" [=] 03) Hunner"
+echo -e $white" [=] 04) WPScan"
+echo -e $white" [=] 05) Webdav"
+echo -e $white" [=] 06) Metasploit"
+echo -e $white" [=] 07) Hammer"
+echo -e $white" [=] 08) Hydra "
+echo -e $white" [=] 09) SQLMap "
+echo -e $white" [=] 10) admin finder "
+echo -e $white" [=] 11) exit"
+echo -e $white""
+read -p "[Ancient_One@MR-T]> " act;
+
+if [ $act = 01 ] || [ $act = 01 ]
+then
+clear
+echo -e $green" Installing Red Hawk "
+sleep 1
+apt update && apt upgrade
+apt install php
+apt install git
+git clone https://github.com/Tuhinshubhra/RED_HAWK
+echo -e $green" Done Install "
+fi
+
+if [ $act = 02 ] || [ $act = 02 ]
+then
+clear
+echo -e $green" Installing D-Tect "
+sleep 1
+apt-get update && apt-get upgrade
+apt-get install git
+apt-get install python2
+git clone https://github.com/shawarkhanethicalhacker/D-TECT
+echo -e $red" Done Install "
+fi
+
+if [ $act = 03 ] || [ $act = 03 ]
+then
+clear
+echo -e $green" Installing Hunner "
+sleep 1
+apt-get update && apt-get upgrade
+apt install python
+apt install git
+git clone https://github.com/b3-v3r/Hunner
+echo -e $red" Done Install "
+fi
+
+if [ $act = 04 ] || [ $act = 04 ]
+then
+clear
+echo -e $green" Installing Wpscan "
+sleep 1
+apt-get update && apt-get upgrade
+apt install ruby
+apt install curl
+apt install git
+git clone https://github.com/wpscanteam/wpscan
+cd ~/wpscan
+gem install bundle
+bundle config build.nokogiri --use-system-libraries
+bundle install
+ruby wpscan.rb --update
+cd ~/
+echo -e $red" Done Install "
+fi
+
+if [ $act = 05 ] || [ $act = 05 ]
+then
+clear
+echo -e $green" Installing Webdav "
+sleep 1
+apt update && apt upgrade
+apt install python2
+pip2 install urllib3 chardet certifi idna requests
+apt install openssl curl
+pkg install libcurl
+mkdir webdav
+cd ~/webdav
+wget https://pastebin.com/raw/HnVyQPtR -O webdav.py
+chmod 777 webdav.py
+cd ~/
+echo -e $red" Done Install "
+fi
+
+if [ $act = 06 ] || [ $act = 06 ]
+then
+clear
+echo -e $green" Installing Metasploit "
+sleep 1
+apt update && apt upgrade
+apt install git
+apt install wget
+wget https://raw.githubusercontent.com/verluchie/termux-metasploit/master/install.sh
+chmod 777 install.sh
+sh install.sh
+echo -e $red" Done Install "
+fi
+
+if [ $act = 07 ] || [ $act = 07 ]
+then
+clear
+echo -e $green" Installing Hammer "
+sleep 1
+pkg update
+pkg upgrade
+pkg install python
+pkg install git
+git clone https://github.com/cyweb/hammer
+cd ~/
+echo -e $red" Done Install "
+fi
+
+if [ $act = 08 ] || [ $act = 08 ]
+then
+clear
+echo -e $green" Installing Hydra "
+sleep 1
+apt update && apt install -y wget
+apt install hydra
+wget http://scrapmaker.com/download/data/wordlists/dictionaries/rockyou.txt
+cd ~/
+echo -e $red" Done Install "
+fi
+
+if [ $act = 09 ] || [ $act = 09 ]
+then
+clear
+echo -e $green" Installing SQLMap "
+sleep 1
+apt update && apt upgrade
+apt install python2
+git clone https://github.com/sqlmapproject/sqlmap.git
+cd ~/
+echo -e $red" Done Install "
+fi
+
+if [ $act = 10 ] || [ $act = 10 ]
+then
+clear
+echo -e $green" Installing admin finder "
+sleep 1
+apt update && apt upgrade
+apt-get install php
+mkdir adfin
+cd ~/webdav
+wget https://pastebin.com/raw/32txZ6Qr -O adfin.php
+cd ~/
+echo -e $red" Done Install "
+fi
+
+if [ $act = 11 ] || [ $act = 11 ]
+then
+echo -e $green" Thank-You "
+sleep 1
+echo -e $green" Tunggu .... "
+sleep 1
+echo -e $white" Di follow Ya IG gw "
+sleep 1
+echo -e $white" IG : tingg87 "
+sleep 1
+echo -e $white" sampai Jumpa Kawan :* "
+sleep 1
+exit
+fi
